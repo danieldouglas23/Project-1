@@ -16,15 +16,19 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./css/style.css" <!-- Style to fix the issue of text extending past panel length -->
   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7/leaflet.css" />
+
   <style>
     .panel-body a {
       word-break: break-all
     }
   </style>
+
+  <!-- Firebase Reference -->
+  <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+
 </head>
 
 <body>
-
 
 
   <!-- Main Bootstrap Search -->
@@ -34,8 +38,6 @@
     <div class="jumbotron" style="background-color: #20315A ; color: white;">
       <h1 class="text-center"><strong><i class="fa fa-map-o"></i> Brewery Map</strong></h1>
     </div>
-
-
 
     <!-- Row for Searching New York Times -->
     <div class="row">
@@ -160,6 +162,7 @@
       </div>
     </div>
 
+    <!-- google map -->
     <section id="contact" class="map">
       <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
         src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d3070.6326689892526!2d-104.96712428517812!3d39.68047685801061!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d39.680627099999995!2d-104.96473069999999!4m5!1s0x876c7e407f638465%3A0x1c626a3055dda1bb!2sColorado+Women&#39;s+College%2C+1901+E+Asbury+Ave%2C+Denver%2C+CO+80208!3m2!1d39.6806505!2d-104.9649707!5e0!3m2!1sen!2sus!4v1552672351882"></iframe>
@@ -177,6 +180,7 @@
     <script src="http://cdn.leafletjs.com/leaflet-0.7/leaflet.js">
     </script>
 
+    <!-- leaflet map -->
     <script>
 
       var planes = [
@@ -202,27 +206,6 @@
 
     </script>
 
-    <!-- This row will handle all of the retrieved articles -->
-    <div class="row">
-      <div class="col-sm-12">
-        <br>
-
-        <!-- This panel will initially be made up of a panel and wells for each of the articles retrieved -->
-        <div class="panel panel-primary">
-
-          <!-- Panel Heading for the retrieved articles box -->
-          <div class="panel-heading">
-            <h3 class="panel-title"><strong><i class="fa fa-table"></i> Top Articles</strong></h3>
-          </div>
-
-          <!-- This main panel will hold each of the resulting articles -->
-          <div class="panel-body" id="wellSection">
-          </div>
-        </div>
-      </div>
-    </div>
-
-
     <!-- Footer Region -->
     <div class="row">
       <div class="col-sm-12">
@@ -236,6 +219,11 @@
 
   </div>
 
+  <!-- firebase -->
+
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+
+  
   <!-- jQuery JS -->
   <script src="https://code.jquery.com/jquery.js"></script>
 
