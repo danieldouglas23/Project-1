@@ -14,8 +14,12 @@
 
   <!-- Font Awesome CSS Icons (For cool glyphicons) -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="./css/style.css" <!-- Style to fix the issue of text extending past panel length -->
-  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7/leaflet.css" />
+
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7/leaflet.css">
+
+ 
+
 
   <style>
     .panel-body a {
@@ -56,7 +60,7 @@
               <!-- Here we create the text box for capturing the search term-->
               <div class="form-group">
                 <label for="search">ZIP code</label>
-                <input type="text" class="form-control" id="searchTerm">
+                <input type="text" class="form-control" id="zip-code-input">
               </div>
 
 
@@ -64,7 +68,7 @@
               <!-- Here we capture the Start Year Parameter-->
               <div class="form-group">
                 <label for="startYear">City (Optional):</label>
-                <input type="text" class="form-control" id="startYear">
+                <input type="text" class="form-control" id="city-input">
               </div>
 
               <!-- Here we capture the Start Year Parameter-->
@@ -76,59 +80,59 @@
               <!-- Here we capture the number of records that the user wants to retrieve  -->
               <div class="form-group">
                   <label for="pwd">State</label>
-                  <select class="form-control" id="numRecordsSelect">
+                  <select class="form-control" id="state-input">
                       <option value="">Select</option>
-                      <option value="AL">Alabama</option>
-                      <option value="AK">Alaska</option>
-                      <option value="AZ">Arizona</option>
-                      <option value="AR">Arkansas</option>
-                      <option value="CA">California</option>
-                      <option value="CO">Colorado</option>
-                      <option value="CT">Connecticut</option>
-                      <option value="DE">Delaware</option>
-                      <option value="DC">District Of Columbia</option>
-                      <option value="FL">Florida</option>
-                      <option value="GA">Georgia</option>
-                      <option value="HI">Hawaii</option>
-                      <option value="ID">Idaho</option>
-                      <option value="IL">Illinois</option>
-                      <option value="IN">Indiana</option>
-                      <option value="IA">Iowa</option>
-                      <option value="KS">Kansas</option>
-                      <option value="KY">Kentucky</option>
-                      <option value="LA">Louisiana</option>
-                      <option value="ME">Maine</option>
-                      <option value="MD">Maryland</option>
-                      <option value="MA">Massachusetts</option>
-                      <option value="MI">Michigan</option>
-                      <option value="MN">Minnesota</option>
-                      <option value="MS">Mississippi</option>
-                      <option value="MO">Missouri</option>
-                      <option value="MT">Montana</option>
-                      <option value="NE">Nebraska</option>
-                      <option value="NV">Nevada</option>
-                      <option value="NH">New Hampshire</option>
-                      <option value="NJ">New Jersey</option>
-                      <option value="NM">New Mexico</option>
-                      <option value="NY">New York</option>
-                      <option value="NC">North Carolina</option>
-                      <option value="ND">North Dakota</option>
-                      <option value="OH">Ohio</option>
-                      <option value="OK">Oklahoma</option>
-                      <option value="OR">Oregon</option>
-                      <option value="PA">Pennsylvania</option>
-                      <option value="RI">Rhode Island</option>
-                      <option value="SC">South Carolina</option>
-                      <option value="SD">South Dakota</option>
-                      <option value="TN">Tennessee</option>
-                      <option value="TX">Texas</option>
-                      <option value="UT">Utah</option>
-                      <option value="VT">Vermont</option>
-                      <option value="VA">Virginia</option>
-                      <option value="WA">Washington</option>
-                      <option value="WV">West Virginia</option>
-                      <option value="WI">Wisconsin</option>
-                      <option value="WY">Wyoming</option>
+                      <option value="Alabama">Alabama</option>
+                      <option value="Alaska">Alaska</option>
+                      <option value="Arizona">Arizona</option>
+                      <option value="Arkansas">Arkansas</option>
+                      <option value="California">California</option>
+                      <option value="Colorado">Colorado</option>
+                      <option value="Cconnecticut">Connecticut</option>
+                      <option value="Delaware">Delaware</option>
+                      <option value="District_of_Columbia">District Of Columbia</option>
+                      <option value="Florida">Florida</option>
+                      <option value="Georgia">Georgia</option>
+                      <option value="Hawaii">Hawaii</option>
+                      <option value="Idaho">Idaho</option>
+                      <option value="Illinois">Illinois</option>
+                      <option value="Indiana">Indiana</option>
+                      <option value="Iowa">Iowa</option>
+                      <option value="Kansas">Kansas</option>
+                      <option value="Kentucky">Kentucky</option>
+                      <option value="Louisiana">Louisiana</option>
+                      <option value="Maine">Maine</option>
+                      <option value="Maryland">Maryland</option>
+                      <option value="Massachusetts">Massachusetts</option>
+                      <option value="Michigan">Michigan</option>
+                      <option value="Minnesota">Minnesota</option>
+                      <option value="Mississippi">Mississippi</option>
+                      <option value="Missouri">Missouri</option>
+                      <option value="Montana">Montana</option>
+                      <option value="Nebraska">Nebraska</option>
+                      <option value="Nevada">Nevada</option>
+                      <option value="New_Hampshire">New Hampshire</option>
+                      <option value="New_Jersey">New Jersey</option>
+                      <option value="New_Mexico">New Mexico</option>
+                      <option value="New_York">New York</option>
+                      <option value="North_Carolina">North Carolina</option>
+                      <option value="North_Dakota">North Dakota</option>
+                      <option value="Ohio">Ohio</option>
+                      <option value="Oklahoma">Oklahoma</option>
+                      <option value="Oregon">Oregon</option>
+                      <option value="Pennsylvania">Pennsylvania</option>
+                      <option value="Rhode_Island">Rhode Island</option>
+                      <option value="South_Carolina">South Carolina</option>
+                      <option value="South_Dakota">South Dakota</option>
+                      <option value="Tennessee">Tennessee</option>
+                      <option value="Texas">Texas</option>
+                      <option value="Utah">Utah</option>
+                      <option value="Vermont">Vermont</option>
+                      <option value="Virgina">Virginia</option>
+                      <option value="Washington">Washington</option>
+                      <option value="West_Virginia">West Virginia</option>
+                      <option value="Wisconsin">Wisconsin</option>
+                      <option value="Wyoming">Wyoming</option>
                   </select>
                 </div>
               <!-- Here we capture the number of records that the user wants to retrieve  -->
@@ -162,33 +166,20 @@
       </div>
     </div>
 
-    <!-- google map -->
-    <section id="contact" class="map">
-      <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-        src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d3070.6326689892526!2d-104.96712428517812!3d39.68047685801061!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d39.680627099999995!2d-104.96473069999999!4m5!1s0x876c7e407f638465%3A0x1c626a3055dda1bb!2sColorado+Women&#39;s+College%2C+1901+E+Asbury+Ave%2C+Denver%2C+CO+80208!3m2!1d39.6806505!2d-104.9649707!5e0!3m2!1sen!2sus!4v1552672351882"></iframe>
-      <br />
-      <large-xl>
-
-        <a
-          href="https://www.google.com/maps/place/University+of+Denver/@39.6766215,-104.9640852,17z/data=!3m1!4b1!4m5!3m4!1s0x876c7e159cdea761:0x7198a721c70f27d9!8m2!3d39.6766174!4d-104.9618965"></a>
-        <!-- <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a> -->
-      </large-xl>
-    </section>
 
     <div id="map" style="width: 100%; height: 400px"></div>
 
     <script src="http://cdn.leafletjs.com/leaflet-0.7/leaflet.js">
     </script>
 
+
     <!-- leaflet map -->
     <script>
 
+
       var planes = [
         ["Kokopelli", 39.8590102032, -105.064038586],
-
-
       ];
-
       var map = L.map('map').setView([39.8590102032, -105.064038586], 10);
       mapLink =
         '<a href="http://openstreetmap.org">OpenStreetMap</a>';
@@ -197,15 +188,16 @@
           attribution: '&copy; ' + mapLink + ' Contributors',
           maxZoom: 18,
         }).addTo(map);
-
       for (var i = 0; i < planes.length; i++) {
         marker = new L.marker([planes[i][1], planes[i][2]])
           .bindPopup(planes[i][0])
           .addTo(map);
       }
 
+
     </script>
     
+
     <!-- This row will handle all of the retrieved articles -->
     <div class="row">
       <div class="col-sm-12">
