@@ -14,17 +14,25 @@
 
   <!-- Font Awesome CSS Icons (For cool glyphicons) -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7/leaflet.css">
+
+ 
+
+
   <style>
     .panel-body a {
       word-break: break-all
     }
   </style>
+
+  <!-- Firebase Reference -->
+  <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+
 </head>
 
 <body>
-
 
 
   <!-- Main Bootstrap Search -->
@@ -34,8 +42,6 @@
     <div class="jumbotron" style="background-color: #20315A ; color: white;">
       <h1 class="text-center"><strong><i class="fa fa-map-o"></i> Brewery Map</strong></h1>
     </div>
-
-
 
     <!-- Row for Searching New York Times -->
     <div class="row">
@@ -166,7 +172,11 @@
     <script src="http://cdn.leafletjs.com/leaflet-0.7/leaflet.js">
     </script>
 
-    <!-- <script>
+
+    <!-- leaflet map -->
+    <script>
+
+
       var planes = [
         ["Kokopelli", 39.8590102032, -105.064038586],
       ];
@@ -183,23 +193,27 @@
           .bindPopup(planes[i][0])
           .addTo(map);
       }
-    </script> -->
+
+
+    </script>
+    
 
     <!-- This row will handle all of the retrieved articles -->
     <div class="row">
       <div class="col-sm-12">
         <br>
 
-        <!-- This panel will initially be made up of a panel and wells for each of the articles retrieved -->
-        <div class="panel panel-primary">
+        <!-- This card will initially be made up of a card and wells for each of the articles retrieved -->
+        <div class="card">
 
-          <!-- Panel Heading for the retrieved articles box -->
-          <div class="panel-heading">
-            <h3 class="panel-title"><strong><i class="fa fa-table"></i> Top Articles</strong></h3>
+          <!-- card Heading for the retrieved articles box -->
+          <div class="card-header">
+            <strong>
+              <i class="fa fa-table"></i> Top Articles</strong>
           </div>
 
-          <!-- This main panel will hold each of the resulting articles -->
-          <div class="panel-body" id="wellSection">
+          <!-- This main card will hold each of the resulting articles -->
+          <div class="card-body" id="article-section">
           </div>
         </div>
       </div>
@@ -219,6 +233,11 @@
 
   </div>
 
+  <!-- firebase -->
+
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+
+  
   <!-- jQuery JS -->
   <script src="https://code.jquery.com/jquery.js"></script>
 
