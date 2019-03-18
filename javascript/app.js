@@ -1,3 +1,20 @@
+// Initialize Firebase
+var config = {
+  apiKey: "AIzaSyAPBwhM5XUGWLitLBCWC-E6PxuK8EnsOkU",
+  authDomain: "project-1-e4560.firebaseapp.com",
+  databaseURL: "https://project-1-e4560.firebaseio.com",
+  projectId: "project-1-e4560",
+  storageBucket: "project-1-e4560.appspot.com",
+  messagingSenderId: "687959041368"
+};
+firebase.initializeApp(config);
+
+var database = firebase.database();
+
+var searchRef = database.ref("/searches");
+
+
+
 (function($) {
     "use strict"; // Start of use strict
   
